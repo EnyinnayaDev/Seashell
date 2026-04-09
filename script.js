@@ -55,3 +55,13 @@ document.addEventListener("DOMContentLoaded", function () {
     };
 
 });
+
+const navbar = document.getElementById("navbar");
+
+window.addEventListener("scroll", () => {
+    if (window.scrollY > 50) {
+        navbar.classList.add("bg-black/80", "backdrop-blur-md");
+    } else {
+        navbar.classList.remove("bg-black/80", "backdrop-blur-md");
+    }
+});

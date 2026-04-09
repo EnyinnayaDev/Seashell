@@ -8,11 +8,8 @@
 </head>
 <body>
 
-    <!--Hero Section-->
-    <section class="heading text-center h-screen bg-cover " style="background-image: url(/images/hero.webp);">
-        
-        <!--NavBar-->
-        <nav class="relative text-Cream w-full">
+     <!--NavBar-->
+        <nav class="fixed top-0 left-0 w-full z-50 text-Cream transition-all duration-300" id="navbar">
             <!--Flex container - PADDING GOES HERE-->
             <div class="container mx-auto p-6 flex items-center justify-between">
                 <!--Logo-->
@@ -31,6 +28,10 @@
                 <a href="./contact.html" class="hidden md:block p-3 px-6 pt-2 text-white bg-OrangeAccent rounded-full baseline hover:bg-Orange">Contact Us</a>
             </div>
         </nav>
+    <!--Hero Section-->
+    <section class="heading text-center h-screen bg-cover " style="background-image: url(/images/hero.webp);">
+        
+       
 
         
 
@@ -40,13 +41,19 @@
             </div>
         </div> 
         
-        <div class="abolute mt-5 bottom-5 left-1/2 transform -translate-x-1/2 text-white animate-bounce"> ' </div>
+        <div class="absolute mt-5 bottom-5 left-1/2 transform -translate-x-1/2 text-white animate-bounce"> ' </div>
     </section>
 
     <!--Services-->
-    <section class="py-16 bg-Cream">
+    <section class="relative py-16 overflow-hidden">
+         
+        <!-- Background Layer -->
+        <div class="absolute inset-0 bg-cover bg-center scale-110 blur-sm" style="background-image: url('./images/Contact.webp');"></div>
 
-        <div class="container max-w-6xl mx-auto px-5 text-center">
+        <!-- Dark Overlay (optional for readability) -->
+        <div class="absolute inset-0 bg-black/40"></div>
+
+        <div class="relative z-10 container max-w-6xl mx-auto px-5 text-center">
 
             <h2 class="text-4xl font-bold mb-10">What we offer</h2>
 
@@ -121,12 +128,65 @@
     </section>
 
     <!--About-->
-    <section class="about text-DeepNavy bg-cyan-50">
-        <div class="container text-center mx-auto mt-0 ">
-            <div class="">
-                <p class=" text-3xl py-7">We don't just offer services, we deliver reliable support.</p>
+    <section class="text-Cream bg-cover bg-center" style="background-image: url(./images/About.webp);">
+
+        <!-- Overlay (optional for readability) -->
+        <div class="bg-black/50 py-16">
+
+            <div class="container mx-auto px-6">
+
+                <div class="grid md:grid-cols-2 gap-10">
+
+                    <!-- LEFT SIDE -->
+                    <div class="space-y-8">
+
+                        <div>
+                            <h1 class="text-3xl font-bold mb-4 font-serif">About Us</h1>
+                            <p class="mb-4 text-lg">
+                                Welcome to S.E.A Shell Limited, an indigenous company in the maritime industry...
+                            </p>
+                            <p class="text-lg">
+                                Our commitment to excellence and sustainability drives us...
+                            </p>
+                        </div>
+
+                        <div>
+                            <h2 class="text-2xl font-bold mb-4 font-serif">Safety Policy Statement</h2>
+                            <p class="text-lg">
+                                S.E.A Shell Ltd safety objective is to ensure strict compliance with all subsisting industry safety codes...
+                            </p>
+                        </div>
+
+                        <div>
+                            <h2 class="text-2xl font-bold mb-4 font-serif">Quality Assurance Policy</h2>
+                            <p class="text-lg">
+                                Our quality assurance policy ensures compliance with industry standards...
+                            </p>
+                        </div>
+
+                    </div>
+
+                    <!-- RIGHT SIDE -->
+                    <div class="space-y-8">
+
+                        <div>
+                            <h2 class="text-2xl font-bold mb-4 font-serif">Our Mission</h2>
+                            <p class="text-lg">
+                                To work with clients to achieve safe, cost effective and efficient operations...
+                            </p>
+                        </div>
+
+                        <div>
+                            <h2 class="text-2xl font-bold mb-4 font-serif">Our Vision</h2>
+                            <p class="text-lg">
+                                To assist clients to identify, manage and reduce risks to projects/operations...
+                            </p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
+
     </section>
 
     <!-- CTA Section -->
