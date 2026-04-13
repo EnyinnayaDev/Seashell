@@ -71,6 +71,7 @@ function toggleMobileMenu() {
     const mobileMenu = document.getElementById('mobileMenu');
     mobileMenu.classList.toggle('active');
     document.body.style.overflow = mobileMenu.classList.contains('active') ? 'hidden' : 'auto';
+    console.log("Mobile menu toggled:");
 }
 
 // Close mobile menu when clicking outside
