@@ -65,3 +65,20 @@ window.addEventListener("scroll", () => {
         navbar.classList.remove("bg-black/80", "backdrop-blur-md");
     }
 });
+
+// Mobile Menu Toggle
+function toggleMobileMenu() {
+    const mobileMenu = document.getElementById('mobileMenu');
+    mobileMenu.classList.toggle('active');
+    document.body.style.overflow = mobileMenu.classList.contains('active') ? 'hidden' : 'auto';
+}
+
+// Close mobile menu when clicking outside
+document.addEventListener('click', function(event) {
+    const mobileMenu = document.getElementById('mobileMenu');
+    const navbar = document.getElementById('navbar');
+    
+    if (!navbar.contains(event.target) && mobileMenu.classList.contains('active')) {
+        toggleMobileMenu();
+    }
+});

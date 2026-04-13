@@ -7,3 +7,9 @@
 .indicator.active {
     background-color: black;
 }
+
+.active {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}

@@ -8,26 +8,43 @@
 </head>
 <body>
 
-     <!--NavBar-->
-        <nav class="fixed top-0 left-0 w-full z-50 text-Cream transition-all duration-300" id="navbar">
-            <!--Flex container - PADDING GOES HERE-->
-            <div class="container mx-auto p-6 flex items-center justify-between">
-                <!--Logo-->
-                <div class="pt-2 flex items-center gap-2">
-                    <img src="" alt="Company's Logo">
-                    <span>S.E.A Shell Limited</span>
-                </div>
-                <!--Menu Items-->
-                <div class="hidden md:flex space-x-6">
-                    <a href="#home" class="hover:text-OrangeAccent">Home</a>
-                    <a href="#service" class="hover:text-OrangeAccent">Services</a>
-                    <a href="#about" class="hover:text-OrangeAccent">About</a>
-                    <a href="#contact" class="hover:text-OrangeAccent">Contact</a>
-                </div>
-                <!-- Button -->
-                <a href="#contact" class="hidden md:block p-3 px-6 pt-2 text-white bg-OrangeAccent rounded-full baseline hover:bg-Orange">Contact Us</a>
+    <!--NavBar-->
+    <nav class="fixed top-0 left-0 w-full z-50 text-Cream transition-all duration-300" id="navbar">
+        <!--Flex container - PADDING GOES HERE-->
+        <div class="container mx-auto p-6 flex items-center justify-between">
+            <!--Logo-->
+            <div class="pt-2 flex items-center gap-2">
+                <img src="" alt="Company's Logo">
+                <span>S.E.A Shell Limited</span>
             </div>
-        </nav>
+            <!--Menu Items-->
+            <div class="hidden md:flex space-x-6">
+                <a href="#home" class="hover:text-OrangeAccent">Home</a>
+                <a href="#service" class="hover:text-OrangeAccent">Services</a>
+                <a href="#about" class="hover:text-OrangeAccent">About</a>
+                <a href="#contact" class="hover:text-OrangeAccent">Contact</a>
+            </div>
+            <!-- Button -->
+            <a href="#contact" class="hidden md:block p-3 px-6 pt-2 text-white bg-OrangeAccent rounded-full baseline hover:bg-Orange">Contact Us</a>
+
+            <!-- Mobile Menu Button -->
+            <button class="md:hidden text-2xl bg-none border-none cursor-pointer z-60" onclick="toggleMobileMenu()">☰</button>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobileMenu" class="hidden mobile-menu fixed top-0 right-0 w-full h-screen bg-white z-50 pt-20 px-6 overflow-y-auto">
+            <button class="absolute top-6 right-6 bg-none border-none text-3xl cursor-pointer text-black" onclick="toggleMobileMenu()">✕</button>
+            <div class="flex flex-col gap-8">
+                <a href="#home" onclick="toggleMobileMenu()" class="text-2xl font-bold text-black py-3">Home</a>
+                <a href="#service" onclick="toggleMobileMenu()" class="text-2xl font-bold text-black py-3">Services</a>
+                <a href="#about" onclick="toggleMobileMenu()" class="text-2xl font-bold text-black py-3">About Us</a>
+                <a href="#contact" onclick="toggleMobileMenu()" class="text-2xl font-bold text-black py-3">Contact Us</a>
+                <a href="#contact" onclick="toggleMobileMenu()" class="block bg-OrangeAccent text-white py-4 px-6 rounded-full text-center font-bold text-lg hover:bg-Orange transition mt-4">Get Free Quote</a>
+            </div>
+        </div>
+    </nav>
+
+
     <!--Hero Section-->
     <section class="heading text-center h-screen bg-cover " id="home" style="background-image: url(./images/hero.webp);">
         
